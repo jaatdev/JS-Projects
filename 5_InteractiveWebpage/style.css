@@ -1,0 +1,21 @@
+body{
+    background-color: hotpink;
+}
+.main {
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+.interactive-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.interactive-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: green;
+}

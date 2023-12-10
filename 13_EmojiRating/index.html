@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Tracker</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #tracker {
+            position: fixed;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<div id="tracker">Mouse coordinates: <span id="coordinates">0, 0</span></div>
+
+<script>
+    // Get the tracker and coordinates elements
+    const tracker = document.getElementById('tracker');
+    const coordinatesElement = document.getElementById('coordinates');
+
+    // Event listener for mousemove event
+    document.addEventListener('mousemove', (event) => {
+        // Get the mouse coordinates
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+
+        // Update the coordinates in the tracker element
+        coordinatesElement.textContent = `${mouseX}, ${mouseY}`;
+
+        // Position the tracker element near the mouse pointer
+        tracker.style.left = mouseX + 15 + 'px';
+        tracker.style.top = mouseY + 15 + 'px';
+    });
+</script>
+
+</body>
+</html>
